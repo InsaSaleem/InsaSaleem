@@ -6,7 +6,7 @@
 
 - 🌱 I’m currently learning **javascript**
 
-- 👨‍💻 All of my projects are available at [https://insasaleem.github.io/portfolio/](https://insasaleem.github.io/portfolio/)
+- 👨‍💻 All of my projects are available at https://insasaleem.github.io/InsaSaleem/
 
 - 💬 Ask me about **HTML,CSS**
 
