@@ -167,13 +167,6 @@ header {
     margin: 15px auto;
 }
 
-.about-details {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    gap: 20px;
-}
 
 .about-details 
 { display: flex; 
