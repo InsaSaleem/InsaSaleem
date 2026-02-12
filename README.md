@@ -34,6 +34,7 @@
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=insasaleem&theme=tokyonight" alt="Insa's Streak" />
 
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=insasaleem&layout=compact&theme=tokyonight" alt="Top Langs" />
 <!--
 **InsaSaleem/InsaSaleem** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
