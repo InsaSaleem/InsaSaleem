@@ -1,363 +1,596 @@
-/* ✅ GENERAL RESET */
+/* ============================================
+   GENERAL RESET
+============================================ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  cursor: none; /* Hide default cursor everywhere */
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
+/* ============================================
+   CSS VARIABLES – DARK MODE (default)
+============================================ */
+[data-theme="dark"] {
+  --bg-primary: #000000;
+  --bg-header: #000000;
+  --bg-about: #b0c4b1;
+  --bg-about-card: #acd4df;
+  --bg-projects: #000000;
+  --bg-footer: #ffffff;
+  --text-primary: #ffffff;
+  --text-about: #333333;
+  --text-footer: #000000;
+  --text-about-heading: #135454;
+  --text-about-detail-heading: #045563;
+  --text-about-detail-p: rgb(15, 2, 2);
+  --border-header: #333333;
+  --border-about-card: #c5bcbc;
+  --border-footer: #000000;
+  --nav-hover: rgb(116, 6, 6);
+  --name-color: #ffffff;
+  --hero-h1: darkmagenta;
+  --hero-highlight: #06b6d4;
+  --projects-h2: #ffffff;
+  --project-card-bg: #F0F0F0;
+  --project-card-text: #333333;
+  --btn-bg: #135454;
+  --btn-hover: #045563;
+  --circle-nav-1: #135454;
+  --circle-nav-2: #2A9192;
+  --circle-nav-3: #80D8DA;
+  --circle-nav-4: #C7C7C7;
+  --toggle-bg: #222;
+  --toggle-border: #555;
+}
+
+/* ============================================
+   CSS VARIABLES – LIGHT MODE
+============================================ */
+[data-theme="light"] {
+  --bg-primary: #f5f5f5;
+  --bg-header: #ffffff;
+  --bg-about: #d6e8d7;
+  --bg-about-card: #c2e0eb;
+  --bg-projects: #f0f0f0;
+  --bg-footer: #e0e0e0;
+  --text-primary: #111111;
+  --text-about: #222222;
+  --text-footer: #111111;
+  --text-about-heading: #0d3e3e;
+  --text-about-detail-heading: #045563;
+  --text-about-detail-p: #111111;
+  --border-header: #cccccc;
+  --border-about-card: #a0b8bb;
+  --border-footer: #999999;
+  --nav-hover: rgb(150, 20, 20);
+  --name-color: #111111;
+  --hero-h1: #7a007a;
+  --hero-highlight: #0891b2;
+  --projects-h2: #111111;
+  --project-card-bg: #ffffff;
+  --project-card-text: #222222;
+  --btn-bg: #135454;
+  --btn-hover: #045563;
+  --circle-nav-1: #135454;
+  --circle-nav-2: #2A9192;
+  --circle-nav-3: #80D8DA;
+  --circle-nav-4: #C7C7C7;
+  --toggle-bg: #f0f0f0;
+  --toggle-border: #cccccc;
+}
+
+/* ============================================
+   BODY
+============================================ */
 body {
-    background-color: black;
-    color: #ffffff;
-    line-height: 1.6;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* ✅ HEADER & NAVBAR */
+/* ============================================
+   CUSTOM CURSOR
+============================================ */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  /* Small inner dot */
+  box-shadow: inset 0 0 0 3px rgba(255,255,255,0.6);
+}
+
+/* In light mode, cursor switches colour */
+[data-theme="light"] .custom-cursor {
+  border-color: rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 0 0 3px rgba(0,0,0,0.45);
+}
+
+/* Hover state – cursor grows slightly */
+.custom-cursor.hovering {
+  width: 42px;
+  height: 42px;
+  background-color: rgba(110, 231, 231, 0.15);
+  border-color: #6ee7e7;
+  box-shadow: 0 0 10px rgba(110, 231, 231, 0.4);
+}
+
+[data-theme="light"] .custom-cursor.hovering {
+  background-color: rgba(6, 182, 212, 0.12);
+  border-color: #0891b2;
+  box-shadow: 0 0 10px rgba(8, 145, 178, 0.35);
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON
+============================================ */
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 2000;
+  background: var(--toggle-bg);
+  border: 2px solid var(--toggle-border);
+  border-radius: 50px;
+  padding: 8px 14px;
+  font-size: 18px;
+  cursor: none;
+  transition: background 0.3s, border-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   HEADER & NAVBAR
+============================================ */
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: black;
-    border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border-header);
+  transition: background 0.4s ease;
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Changed from space-evenly for better spacing */
-    padding: 15px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .container {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .circle {
-    width: 30px;
-    height: 30px;
-    background-color: #6ee7e7;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #6ee7e7;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.circle:hover {
+  transform: scale(1.2);
 }
 
 .name {
-    font-size: 25px;
-    font-weight: bold;
-    color: white;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--name-color);
+  transition: color 0.4s ease;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 25px;
+  display: flex;
+  list-style: none;
+  gap: 25px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    font-weight: 550;
-    color: white;
-    transition: color 0.3s;
+  text-decoration: none;
+  font-weight: 550;
+  color: var(--text-primary);
+  transition: color 0.3s;
 }
 
 .nav-links li a:hover {
-    color: rgb(116, 6, 6);
+  color: var(--nav-hover);
 }
 
-/* ✅ HOME SECTION */
+/* ============================================
+   HAMBURGER (Mobile)
+============================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: none;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--text-primary);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ============================================
+   HOME SECTION
+============================================ */
 .page {
-  min-height: 400px; /* Reduced from 550px */
+  min-height: 400px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  padding: 20px 30px; /* Reduced padding */
-  background: black;
-  margin-top: 0;      /* Cleaned up the negative margin */
+  padding: 20px 30px;
+  background: var(--bg-primary);
+  transition: background 0.4s ease;
 }
 
 .image {
-    width: 350px;
-    height: 350px;
-    border: 2px solid white;
-    border-radius: 50%;
-    background-image: url("profile-picture.jpg");
-    background-size: cover;
-    background-position: center;
-    flex-shrink: 0;
+  width: 350px;
+  height: 350px;
+  border: 2px solid var(--text-primary);
+  border-radius: 50%;
+  background-image: url("profile-picture.jpg");
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  transition: border-color 0.4s ease, transform 0.4s ease;
+}
+
+.image:hover {
+  transform: scale(1.03);
 }
 
 .content h1 {
-    font-size: 60px;
-    font-weight: bold;
-    color: darkmagenta;
-    margin-bottom: 10px;
+  font-size: 60px;
+  font-weight: bold;
+  color: var(--hero-h1);
+  margin-bottom: 10px;
+  transition: color 0.4s ease;
 }
 
 .content .highlight {
-    font-size: 30px;
-    font-weight: bold;
-    color: #06b6d4;
-    margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--hero-highlight);
+  margin-bottom: 20px;
+  transition: color 0.4s ease;
 }
 
 .content p {
-    font-size: 18px;
-    max-width: 500px;
-    color: white;
+  font-size: 18px;
+  max-width: 500px;
+  color: var(--text-primary);
+  transition: color 0.4s ease;
 }
 
-/* ✅ CIRCLE MENU */
+/* ============================================
+   CIRCLE MENU
+============================================ */
 .circle-menu {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding-bottom: 60px;
-    background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 60px;
+  background-color: var(--bg-primary);
+  transition: background 0.4s ease;
 }
 
 .menu-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.menu-circle.Home { background-color: #135454; color: white; }
-.menu-circle.About { background-color: #2A9192; color: black; }
-.menu-circle.Projects { background-color: #80D8DA; color: black; }
-.menu-circle.Contact { background-color: #C7C7C7; color: black; }
+.menu-circle.Home    { background-color: var(--circle-nav-1); color: white; }
+.menu-circle.About   { background-color: var(--circle-nav-2); color: black; }
+.menu-circle.Projects{ background-color: var(--circle-nav-3); color: black; }
+.menu-circle.Contact { background-color: var(--circle-nav-4); color: black; }
 
 .menu-circle:hover {
-    background-color: white;
-    transform: scale(1.1);
-    color: black;
+  background-color: white;
+  transform: scale(1.1);
+  color: black;
+  box-shadow: 0 6px 20px rgba(110,231,231,0.35);
 }
 
-/* ✅ ABOUT SECTION (Green Area) */
+/* ============================================
+   ABOUT SECTION
+============================================ */
 .about-section {
   width: 100%;
-  padding: 30px 10%;  /* Reduced top padding from 80px to 20px */
-  background-color: #b0c4b1;
-  color: #333;
+  padding: 30px 10%;
+  background-color: var(--bg-about);
+  color: var(--text-about);
   text-align: center;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 .about-section h2 {
-    font-size: 45px;
-    margin-bottom: 20px;
-    color: #135454;
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: var(--text-about-heading);
+  transition: color 0.4s ease;
 }
 
-.about-section p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 15px auto;
+.about-section > p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 15px auto;
 }
 
-
-.about-details 
-{ display: flex; 
+.about-details {
+  display: flex;
   justify-content: space-around;
-   align-items: flex-start; 
-   flex-wrap: wrap; 
-   margin-top: 40px; 
-   gap: 30px; 
-  }
-   .about-details div 
-   { flex: 1; /* each takes equal width */ 
-    min-width: 250px;
-     padding: 20px; 
-     background: #acd4df; 
-     border: 2.5px solid #c5bcbc;
-      border-radius: 12px;
-       box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
-       transition: transform 0.3s ease; 
-      } 
-      .about-details div:hover
-       { transform: translateY(-5px);
-       }
-        .about-details h3 
-        { font-size: 25px;
-         margin-bottom: 10px; 
-         color: #045563;
-           } 
-        .about-details p{ font-size:15px;
-         font-family: Arial, Helvetica, sans-serif; 
-       font-style:normal; 
-       font-weight:300;
-       font-weight: bold;
-       text-align:cnter; 
-     color:rgb(15, 2, 2);
- }
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.about-details div {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  background: var(--bg-about-card);
+  border: 2.5px solid var(--border-about-card);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, background 0.4s ease;
+}
+
+.about-details div:hover {
+  transform: translateY(-5px);
+}
+
+.about-details h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: var(--text-about-detail-heading);
+}
+
+.about-details p {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--text-about-detail-p);
+}
 
 .cv-button {
-    display: inline-block;
-    margin-top: 40px;
-    padding: 12px 30px;
-    background: #135454;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
-.report-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #135454; /* Consistent with your theme */
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 14px;
-    transition: 0.3s;
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 30px;
+  background: var(--btn-bg);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.report-btn:hover {
-    background-color: #045563;
-    transform: scale(1.05);
+.cv-button:hover {
+  background: var(--btn-hover);
+  transform: scale(1.05);
 }
 
-/* ✅ PROJECTS SECTION */
+/* ============================================
+   PROJECTS SECTION
+============================================ */
 .projects-section {
-    padding: 50px 5%;
-    background-color: black;
-    text-align: center;
+  padding: 50px 5%;
+  background-color: var(--bg-projects);
+  text-align: center;
+  transition: background 0.4s ease;
 }
+
 .projects-section h2 {
-    font-size: 40px;
-    margin-top: -15px;    /* Pulls the name "My Projects" up further */
-    margin-bottom: 30px;  /* Space between name and the project cards */
-    color: white;
-    text-shadow: 0 0 10px rgb(32, 29, 29);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;            /* Space for the icon next to the text */
+  font-size: 40px;
+  margin-top: -15px;
+  margin-bottom: 30px;
+  color: var(--projects-h2);
+  text-shadow: 0 0 10px rgb(32, 29, 29);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: color 0.4s ease;
 }
+
 .projects-container {
-    display: grid;
-    /* ✅ This forces exactly 2 columns per row */
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .project-card {
-    background: #F0F0F0;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: left;
-    color: #333;
-    transition: transform 0.3s;
+  background: var(--project-card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  color: var(--project-card-text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(110,231,231,0.2);
 }
 
 .project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
 }
 
-/* ✅ FOOTER (Responsive Fix) */
+.project-card:hover img {
+  transform: scale(1.02);
+}
+
+.report-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--btn-bg);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.report-btn:hover {
+  background-color: var(--btn-hover);
+  transform: scale(1.05);
+}
+
+/* ============================================
+   BAR DIVIDER
+============================================ */
+.bar {
+  height: 2px;
+  background: var(--border-footer);
+}
+
+/* ============================================
+   FOOTER
+============================================ */
 .links {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 10%;
-    background-color: white;
-    color: black;
-    /* ✅ Darkened the line to 2px solid black */
-    border-top: 2px solid #000000; 
-    /* ✅ Keeps items from crashing into each other */
-    flex-wrap: wrap; 
-    gap: 30px; 
-}
-
-/* ✅ Add this to ensure each link column has enough space */
-.links div {
-    min-width: 200px; 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 10%;
+  background-color: var(--bg-footer);
+  color: var(--text-footer);
+  border-top: 2px solid var(--border-footer);
+  flex-wrap: wrap;
+  gap: 30px;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 .links div {
-    flex: 1;
-    min-width: 200px;
+  flex: 1;
+  min-width: 200px;
 }
 
 .add h3 { font-size: 18px; margin-bottom: 10px; }
 .add2 { text-align: center; }
 .add3 { text-align: right; }
-.links a { color: black; text-decoration: none; }
+.links a { color: var(--text-footer); text-decoration: none; transition: color 0.3s; }
 .links a:hover { text-decoration: underline; }
 
-/* ✅ MOBILE RESPONSIVE FIX */
+/* ============================================
+   MOBILE RESPONSIVE
+============================================ */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
+  .hamburger { display: flex; }
 
-    .nav-links {
-        gap: 15px;
-        font-size: 14px;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-header);
+    padding: 20px;
+    gap: 15px;
+    border-bottom: 1px solid var(--border-header);
+    z-index: 999;
+  }
 
-    .page {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 20px;
-    }
+  .nav-links.open { display: flex; }
 
-    .image {
-        width: 250px;
-        height: 250px;
-    }
+  /* Hide theme toggle on mobile inside navbar area - keep it fixed */
+  .theme-toggle { top: 14px; right: 60px; font-size: 15px; padding: 6px 11px; }
 
-    .content h1 { font-size: 40px; }
+  .navbar { flex-wrap: wrap; position: relative; }
 
-    .circle-menu {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+  .page {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+  }
 
-    .menu-circle {
-        width: 80px;
-        height: 80px;
-        font-size: 13px;
-    }
+  .image {
+    width: 250px;
+    height: 250px;
+  }
 
-    .about-section {
-        padding: 50px 20px;
-    }
+  .content h1 { font-size: 40px; }
 
-    .links {
-        flex-direction: column;
-        text-align: center;
-    }
+  .circle-menu {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-    .add2, .add3 { text-align: center; }
-    @media (max-width: 768px) {
-    .projects-container {
-        grid-template-columns: 1fr; 
-    }
+  .menu-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 13px;
+  }
+
+  .about-section { padding: 50px 20px; }
+
+  .projects-container { grid-template-columns: 1fr; }
+
+  .links {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .add2, .add3 { text-align: center; }
 }
+
+/* Restore normal cursor on touch devices */
+@media (hover: none) {
+  * { cursor: auto !important; }
+  .custom-cursor { display: none; }
 }

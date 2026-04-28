@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio website</title>
+  <title>Insa Saleem – Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+    <span class="toggle-icon" id="toggleIcon">☀️</span>
+  </button>
+
   <header>
     <div class="navbar">
       <div class="container">
@@ -14,7 +23,12 @@
         <h1 class="name">Insa Saleem</h1>
       </div>
 
-      <ul class="nav-links">
+      <!-- Hamburger for mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -24,115 +38,108 @@
   </header>
 
   <main>
-    <!-- ✅ Home Section -->
+    <!-- Home Section -->
     <div class="page" id="home">
       <div class="image"></div>
       <div class="content">
         <h1>Hi, It's Insa</h1>
         <p class="highlight">I'm Front-end web developer</p>
         <p>
-          As a Front-End Web Developer starting my journey, I’m eager to create 
+          As a Front-End Web Developer starting my journey, I'm eager to create 
           responsive, user-friendly websites and enhance my skills through real-world projects.
         </p>
       </div>
-      
     </div>
 
-    <!-- ✅ Circle Menu -->
+    <!-- Circle Menu -->
     <div class="circle-menu">
       <a href="#home" class="menu-circle Home">Home</a>
       <a href="#about" class="menu-circle About">About</a>
       <a href="#projects" class="menu-circle Projects">Projects</a>
       <a href="#contact" class="menu-circle Contact">Contact</a>
     </div>
- <!-- ✅ About section -->
+
+    <!-- About Section -->
     <section class="about-section" id="about">
-  <h2>About Me</h2>
-  
-  <p>
-    I’m a BSCS student passionate about technology, especially web development, artificial intelligence, and problem solving. 
-    My journey as a learner has been exciting, as I continue exploring how coding and design can come together to build impactful solutions.
-  </p>
-  
-  <p>
-    Alongside my studies, I enjoy building small projects and mini systems that improve my skills and allow me to experiment with new tools and techniques. 
-    My goal is to grow into a skilled software developer and contribute to innovative ideas that make a difference.
-  </p>
+      <h2>About Me</h2>
+      <p>
+        I'm a BSCS student passionate about technology, especially web development, artificial intelligence, and problem solving. 
+        My journey as a learner has been exciting, as I continue exploring how coding and design can come together to build impactful solutions.
+      </p>
+      <p>
+        Alongside my studies, I enjoy building small projects and mini systems that improve my skills and allow me to experiment with new tools and techniques. 
+        My goal is to grow into a skilled software developer and contribute to innovative ideas that make a difference.
+      </p>
 
-  <div class="about-details">
-    <div>
-      <h3>Education</h3>
-      <p>CS Student at Fatima Jinnah Women University Rawalpindi</p>
-    </div>
+      <div class="about-details">
+        <div>
+          <h3>Education</h3>
+          <p>CS Student at Fatima Jinnah Women University Rawalpindi</p>
+        </div>
+        <div>
+          <h3>Interests</h3>
+          <p>Passionate about Web Development, Artificial Intelligence, and Problem Solving, with a focus on creating innovative and impactful solutions</p>
+        </div>
+        <div>
+          <h3>Skills</h3>
+          <p>HTML, CSS, JavaScript (learning React, Git, and responsive design)</p>
+        </div>
+      </div>
 
-    <div>
-      <h3>Interests</h3>
-     <p>Passionate about Web Development, Artificial Intelligence, and Problem Solving, with a focus on creating innovative and impactful solutions</p>
+      <a href="CV.pdf" target="_blank" class="cv-button">📄 Download My CV</a>
+    </section>
 
-</p>
-      <!-- Web Development, Artificial Intelligence, Problem Solving to build innovative and impactful solutions -->
-    </div>
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <h2>🛠 My Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <img src="smartlib.jpg" alt="SmartLib Library Software">
+          <h3>SmartLib – Smart University Library Software</h3>
+          <p>Cross-platform system for automated book tracking. Built with <b>PHP/MySQL</b> (Web) and <b>Supabase</b> (Mobile) for real-time sync and secure user authentication.</p>
+          <a href="web project report.pdf" class="report-btn" target="_blank">View Report</a>
+        </div>
 
-    <div>
-      <h3>Skills</h3>
-      <p>HTML, CSS, JavaScript (learning React, Git, and responsive design) </p>
-    </div>
-  </div>
-   <!-- ✅ CV Button -->
-  <a href="CV.pdf" target="_blank" class="cv-button">📄 Download My CV</a>
-</section>
-</section>
+        <div class="project-card">
+          <img src="grocery.jpg" alt="Grocery Management System">
+          <h3>Grocery Management System</h3>
+          <p>Web-based system to manage billing, inventory, customer handling, and payment tracking. Built using <b>PHP, MySQL, HTML/CSS</b> on XAMPP.</p>
+          <a href="ADBMS Report.pdf" class="report-btn" target="_blank">View Report</a>
+        </div>
 
-    <!-- ✅ Project Section -->
-     <section class="projects-section" id="projects">
-  <h2>🛠 My Projects</h2>
-  <div class="projects-container">
-    <div class="project-card">
-      <img src="smartlib.jpg" alt="SmartLib Library Software">
-      <h3>SmartLib – Smart University Library Software</h3>
-      <p>Cross-platform system for automated book tracking. Built with <b>PHP/MySQL</b> (Web) and <b>Supabase</b> (Mobile) for real-time sync and secure user authentication.</p>
-      <a href="web project report.pdf" class="report-btn" target="_blank">View Report</a>
-    </div>
+        <div class="project-card">
+          <img src="weather.jpg" alt="Weather Monitoring System">
+          <h3>Weather Monitoring System</h3>
+          <p>Simulates temperature and humidity data with LEDs indicating ranges, using MAX232 for serial communication. Developed with <b>Arduino UNO, LEDs, RS232.</b></p>
+          <a href="COAL PROJECT REPORT .pdf" class="report-btn" target="_blank">View Report</a>
+        </div>
 
-    <div class="project-card">
-      <img src="grocery.jpg" alt="Grocery Management System">
-      <h3>Grocery Management System</h3>
-      <p>Web-based system to manage billing, inventory, customer handling, and payment tracking. Built using <b>PHP, MySQL, HTML/CSS</b> on XAMPP.</p>
-      <a href="ADBMS Report.pdf" class="report-btn" target="_blank">View Report</a>
-    </div>
+        <div class="project-card">
+          <img src="robot.jpg" alt="Robot Navigation Puzzle">
+          <h3>Robot Navigation Puzzle (Knight's Travails)</h3>
+          <p>Interactive simulation exploring BFS & DFS algorithms to navigate a robot on a grid. Built with <b>Python Tkinter</b>, animated robot movement.</p>
+          <a href="ROBOT Navigation Puzzel.pdf" class="report-btn" target="_blank">View Report</a>
+        </div>
 
-    <div class="project-card">
-      <img src="weather.jpg" alt="Weather Monitoring System">
-      <h3>Weather Monitoring System</h3>
-      <p>Simulates temperature & humidity data with LEDs indicating ranges, using MAX232 for serial communication. Developed with <b>Arduino UNO, LEDs, RS232.</b></p>
-      <a href="COAL PROJECT REPORT .pdf" class="report-btn" target="_blank">View Report</a>
-    </div>
+        <div class="project-card">
+          <img src="university-nav.jpg" alt="AI-Based University Navigation System">
+          <h3>AI-Based University Navigation System</h3>
+          <p>Voice-controlled system that guides users across campus using speech recognition and text-to-speech. Built in <b>Python</b> with speech libraries & graph algorithms.</p>
+          <a href="AI Project Report.pdf" class="report-btn" target="_blank">View Report</a>
+        </div>
 
-    <div class="project-card">
-      <img src="robot.jpg" alt="Robot Navigation Puzzle">
-      <h3>Robot Navigation Puzzle (Knight’s Travails)</h3>
-      <p>Interactive simulation exploring BFS & DFS algorithms to navigate a robot on a grid. Built with <b>Python Tkinter</b>, animated robot movement.</p>
-      <a href="ROBOT Navigation Puzzel.pdf" class="report-btn" target="_blank">View Report</a>
-    </div>
+        <div class="project-card">
+          <img src="rfid.jpg" alt="RFID Solenoid Door Lock">
+          <h3>RFID Solenoid Door Lock System</h3>
+          <p>Contactless access control using RFID cards to securely unlock doors. Built with <b>Arduino UNO, RFID sensor, solenoid lock, LEDs</b>.</p>
+          <a href="DLD_project_Report.pdf" class="report-btn" target="_blank">View Report</a>
+        </div>
+      </div>
+    </section>
 
-    <div class="project-card">
-      <img src="university-nav.jpg" alt="AI-Based University Navigation System">
-      <h3>AI-Based University Navigation System</h3>
-      <p>Voice-controlled system that guides users across campus using speech recognition and text-to-speech. Built in <b>Python</b> with speech libraries & graph algorithms.</p>
-      <a href="AI Project Report.pdf" class="report-btn" target="_blank">View Report</a>
-    </div>
+    <div class="bar"></div>
 
-    <div class="project-card">
-      <img src="rfid.jpg" alt="RFID Solenoid Door Lock">
-      <h3>RFID Solenoid Door Lock System</h3>
-      <p>Contactless access control using RFID cards to securely unlock doors. Built with <b>Arduino UNO, RFID sensor, solenoid lock, LEDs</b>.</p>
-      <a href="DLD_project_Report.pdf" class="report-btn" target="_blank">View Report</a>
-    </div>
-  </div>
-</section>
-    <div class="bar"> </div>
-
-    <!-- ✅ Footer / Contact Section -->
+    <!-- Footer / Contact Section -->
     <footer class="links" id="contact">
       <div class="add1 add">
         <h3>Email</h3>
@@ -146,9 +153,9 @@
         <h3>LinkedIn</h3>
         <p><a href="https://www.linkedin.com/in/insa-saleem/" target="_blank">linkedin.com/in/insa-saleem</a></p>
       </div>
-      
     </footer>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
