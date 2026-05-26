@@ -1,172 +1,515 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insa Saleem – Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insa Saleem | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link id="dynamicFavicon" rel="icon" type="image/png" href="./images/dark.png"/>
 </head>
 <body>
 
-  <!-- Custom Cursor -->
-  <div class="custom-cursor" id="cursor"></div>
-
-  <!-- Theme Toggle Button -->
-  <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
-    <span class="toggle-icon" id="toggleIcon">☀️</span>
-  </button>
-
-  <header>
-    <div class="navbar">
-      <div class="container">
-        <div class="circle"></div>
-        <h1 class="name">Insa Saleem</h1>
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo-container">
+        <img src="./images/dark.png" alt="Insa Saleem" id="loaderLogo" class="loader-logo"/>
       </div>
+      <div class="loader-text">Insa Saleem | PORTFOLIO 2026</div>
+    </div>
+  </div>
 
-      <!-- Hamburger for mobile -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+  <div class="animated-bg-container">
+    <canvas id="ambientCanvas"></canvas>
+  </div>
+
+  <header id="navbar">
+    <nav class="nav-inner">
+      
+      <a href="#home" class="nav-logo">
+        <div class="navbar-logo-graphic">
+           <img src="./images/dark.png" alt="Insa Saleem" id="navbarLogo" class="loader-logo"/>
+        </div>
+        <span>Insa Saleem</span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+      <div class="nav-menu-wrapper" id="navMenuWrapper">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span id="themeIcon">☀️</span>
+      </button>
+      
+    </nav>
   </header>
 
   <main>
-    <!-- Home Section -->
-    <div class="page" id="home">
-      <div class="image"></div>
-      <div class="content">
-        <h1>Hi, It's Insa</h1>
-        <p class="highlight">I'm Front-end web developer</p>
-        <p>
-          As a Front-End Web Developer starting my journey, I'm eager to create 
-          responsive, user-friendly websites and enhance my skills through real-world projects.
-        </p>
-      </div>
-    </div>
 
-    <!-- Circle Menu -->
-    <div class="circle-menu">
-      <a href="#home" class="menu-circle Home">Home</a>
-      <a href="#about" class="menu-circle About">About</a>
-      <a href="#projects" class="menu-circle Projects">Projects</a>
-      <a href="#contact" class="menu-circle Contact">Contact</a>
-    </div>
-
-    <!-- About Section -->
-    <section class="about-section" id="about">
-      <h2>About Me</h2>
-      <p>
-        I'm a BSCS student passionate about technology, especially web development, artificial intelligence, and problem solving. 
-        My journey as a learner has been exciting, as I continue exploring how coding and design can come together to build impactful solutions.
-      </p>
-      <p>
-        Alongside my studies, I enjoy building small projects and mini systems that improve my skills and allow me to experiment with new tools and techniques. 
-        My goal is to grow into a skilled software developer and contribute to innovative ideas that make a difference.
-      </p>
-
-      <div class="about-details">
-        <div>
-          <h3>Education</h3>
-          <p>CS Student at Fatima Jinnah Women University Rawalpindi</p>
+    <section class="hero" id="home">
+      <div class="hero-text  ">
+        <p class="hero-tag reveal">Open to Opportunities · 2026</p>
+        <h1 class="hero-headline reveal">
+          <span id="typedText"></span><span class="cursor-blink">|</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Frontend Developer & Data Analyst <br>
+          Bridging the gap between creative front-end design and data-driven logic to build scalable, user-centric applications.</p>
+        <div class="hero-btns reveal">
+          <a href="#projects" class="btn-primary">View My Projects</a>
+          <a href="assets/pdfs/CV.pdf" target="_blank" class="btn-outline">Download CV</a>
         </div>
-        <div>
-          <h3>Interests</h3>
-          <p>Passionate about Web Development, Artificial Intelligence, and Problem Solving, with a focus on creating innovative and impactful solutions</p>
-        </div>
-        <div>
-          <h3>Skills</h3>
-          <p>HTML, CSS, JavaScript (learning React, Git, and responsive design)</p>
+        <div class="hero-meta reveal">
+          <div class="meta-pill">University<br><b>FJWU · 2027</b></div>
+          <div class="meta-pill">Focus<br><b>Web Development &amp; Data Analytics</b></div>
         </div>
       </div>
-
-      <a href="CV.pdf" target="_blank" class="cv-button">📄 Download My CV</a>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects-section" id="projects">
-      <h2>🛠 My Projects</h2>
-      <div class="projects-container">
-        <div class="project-card">
-          <img src="smartlib.jpg" alt="SmartLib Library Software">
-          <h3>SmartLib – Smart University Library Software</h3>
-          <p>Cross-platform system for automated book tracking. Built with <b>PHP/MySQL</b> (Web) and <b>Supabase</b> (Mobile) for real-time sync and secure user authentication.</p>
-          <a href="web project report.pdf" class="report-btn" target="_blank">View Report</a>
-        </div>
-
-        <div class="project-card">
-          <img src="grocery.jpg" alt="Grocery Management System">
-          <h3>Grocery Management System</h3>
-          <p>Web-based system to manage billing, inventory, customer handling, and payment tracking. Built using <b>PHP, MySQL, HTML/CSS</b> on XAMPP.</p>
-          <a href="ADBMS Report.pdf" class="report-btn" target="_blank">View Report</a>
-        </div>
-
-        <div class="project-card">
-          <img src="weather.jpg" alt="Weather Monitoring System">
-          <h3>Weather Monitoring System</h3>
-          <p>Simulates temperature and humidity data with LEDs indicating ranges, using MAX232 for serial communication. Developed with <b>Arduino UNO, LEDs, RS232.</b></p>
-          <a href="COAL PROJECT REPORT .pdf" class="report-btn" target="_blank">View Report</a>
-        </div>
-
-        <div class="project-card">
-          <img src="robot.jpg" alt="Robot Navigation Puzzle">
-          <h3>Robot Navigation Puzzle (Knight's Travails)</h3>
-          <p>Interactive simulation exploring BFS & DFS algorithms to navigate a robot on a grid. Built with <b>Python Tkinter</b>, animated robot movement.</p>
-          <a href="ROBOT Navigation Puzzel.pdf" class="report-btn" target="_blank">View Report</a>
-        </div>
-
-        <div class="project-card">
-          <img src="university-nav.jpg" alt="AI-Based University Navigation System">
-          <h3>AI-Based University Navigation System</h3>
-          <p>Voice-controlled system that guides users across campus using speech recognition and text-to-speech. Built in <b>Python</b> with speech libraries & graph algorithms.</p>
-          <a href="AI Project Report.pdf" class="report-btn" target="_blank">View Report</a>
-        </div>
-
-        <div class="project-card">
-         <img src="Fjwu.png" alt="Degree vs Skill Project">
-
-<h3>Degree vs. Skill: Are FJWU Students Truly Job-Ready?</h3>
-
-<p>
-A data analytics research project focused on evaluating the gap between 
-academic performance and industry readiness among FJWU Computer Science students. 
-The project involved <b>survey analysis, statistical evaluation, NLP sentiment analysis, 
-data visualization, and interactive dashboard development</b> to identify critical 
-skill gaps and professional preparedness trends.
-</p>
-
-<a href="Research Project Report.pdf" class="report-btn" target="_blank">
-  View Report
-</a>
+      <div class="hero-image reveal">
+        <div class="img-frame">
+          <img src="./images/profile.png" alt="Insa Saleem"/>
         </div>
       </div>
     </section>
 
-    <div class="bar"></div>
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span>HTML</span><span>·</span><span>CSS</span><span>·</span><span>JavaScript</span><span>·</span>
+        <span>Python</span><span>·</span><span>SQL</span><span>·</span><span>React</span><span>·</span>
+        <span>PHP</span><span>·</span><span>Data Analytics</span><span>·</span><span>Apache Spark</span><span>·</span>
+        <span>NLP</span><span>·</span><span>Git</span><span>·</span><span>Supabase</span><span>·</span>
+        <span>HTML</span><span>·</span><span>CSS</span><span>·</span><span>JavaScript</span><span>·</span>
+        <span>Python</span><span>·</span><span>SQL</span><span>·</span><span>React</span><span>·</span>
+        <span>PHP</span><span>·</span><span>Data Analytics</span><span>·</span><span>Apache Spark</span><span>·</span>
+        <span>NLP</span><span>·</span><span>Git</span><span>·</span><span>Supabase</span><span>·</span>
+      </div>
+    </div>
 
-    <!-- Footer / Contact Section -->
-    <footer class="links" id="contact">
-      <div class="add1 add">
-        <h3>Email</h3>
-        <p>insasaleem6@gmail.com</p>
+    <section class="about-section section" id="about">
+      <div class="section-label reveal">About Me</div>
+      <h2 class="section-title reveal">Who I Am.</h2>
+      <div class="about-grid">
+        <div class="about-bio reveal   ">
+          <p>I'm a BSCS student at Fatima Jinnah Women University with a dual focus on <strong>Front-End Web Development</strong> and <strong>Data Analytics</strong>. I build responsive, user-centric web experiences while also engineering data pipelines, performing statistical analysis, and extracting actionable insights from complex datasets.</p>
+          <p>From crafting pixel-perfect interfaces to designing ETL workflows with Apache Spark, I enjoy working across both sides of technology  where design meets data. My goal is to develop solutions that are not just functional, but meaningful and impactful.</p>
+          <p>Currently exploring the intersection of AI, behavioral data analysis, and modern web development as part of my academic research and internship work.</p>
+        </div>
+        <div class="about-cards">
+  <div class="about-card reveal">
+    <h3>💡 Interests</h3>
+    <p>Web Development · Data Analytics · AI · UI/UX Design · Tech Research</p>
+  </div>
+  
+  <div class="about-card reveal">
+    <h3>📍 Based In</h3>
+    <p>Rawalpindi, Pakistan</p>
+    <span id="localTime" class="local-time">--:-- --</span>
+    <span id="localDate" class="local-date">-- --- ----</span>
+    <span class="tz-label">PKT</span>
+  </div>
+</div>
       </div>
-      <div class="add2 add">
-        <h3>GitHub</h3>
-        <p><a href="https://github.com/InsaSaleem" target="_blank">github.com/insa-saleem</a></p>
+    </section>
+
+
+
+
+ <!-- ===== Projects ===== -->
+   <section class="projects-section section" id="projects">
+    <div class="section-label reveal">Work</div>
+    <h2 class="section-title reveal">My Projects</h2>
+    <p class="section-sub reveal">Professional experience and projects I have accumulated over several years.</p>
+
+    <div class="timeline-container">
+      
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">📊</div>
+        <div class="timeline-content">
+          <div class="project-company">📊 Research</div>
+          <h3 class="project-title">Are FJWU Students Truly Job-Ready? A Data Analytics Perspective</h3>
+          <p class="project-date">📅 Apr 2026 – Present · Fatima Jinnah Women University</p>
+          <p class="project-description">Investigates the CS student skills gap using survey data from 108 students. Combines statistical engineering, NLP text analytics, and interactive dashboarding to visualize academic-to-industry readiness.</p>
+          <div class="project-tech-row">
+            <span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">NumPy</span>
+            <span class="tech-tag">NLTK</span><span class="tech-tag">Matplotlib</span><span class="tech-tag">Chart.js</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://insasaleem.github.io/Professional-Practices-Project-FJWU/" target="_blank" class="btn-primary btn-sm">🌐 Live Dashboard</a>
+            <a href="https://github.com/InsaSaleem/Professional-Practices-Project-FJWU" target="_blank" class="btn-outline btn-sm">GitHub</a>
+            <a href="assets/pdfs/Are FJWU Students Truly Job-Ready report.pdf" target="_blank" class="btn-outline btn-sm">REPORT ↗</a>
+          </div>
+        </div>
       </div>
-      <div class="add3 add">
-        <h3>LinkedIn</h3>
-        <p><a href="https://www.linkedin.com/in/insa-saleem/" target="_blank">linkedin.com/in/insa-saleem</a></p>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">🔍</div>
+        <div class="timeline-content">
+          <div class="project-company">🔍 Research</div>
+          <h3 class="project-title">Sentimental Academia: Behavioral Data Analysis of Student Evaluation Biases</h3>
+          <p class="project-date">📅 Feb 2026 – Present · Fatima Jinnah Women University</p>
+          <p class="project-description">Applies NLP, thematic classification, and data visualization to qualitative student feedback datasets to expose underlying evaluation biases and behavioral academic patterns.</p>
+          <div class="project-tech-row">
+            <span class="tech-tag">Python</span><span class="tech-tag">NLP</span><span class="tech-tag">Sentiment Analysis</span>
+            <span class="tech-tag">Thematic Analysis</span><span class="tech-tag">Data Visualization</span>
+          </div>
+        </div>
       </div>
-    </footer>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">⚡</div>
+        <div class="timeline-content">
+          <div class="project-company">⚡ Data Analytics</div>
+          <h3 class="project-title">Energy Access Survey — Spark ETL + Benchmarking</h3>
+          <p class="project-date">Data · Parallel Computing</p>
+          <p class="project-description">Interactive, reproducible analysis of Pakistan's Household Panel Survey data using PySpark. Features high-performance ETL pipelines, Spark SQL querying, and speed optimization benchmarking.</p>
+          <div class="project-tech-row">
+            <span class="tech-tag">Apache Spark</span><span class="tech-tag">Python</span><span class="tech-tag">Spark SQL</span>
+            <span class="tech-tag">Pandas</span><span class="tech-tag">Matplotlib</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://insasaleem.github.io/PySpark-vs-Python-Performace-Analysis/" target="_blank" class="btn-primary btn-sm">🌐 Live Dashboard</a>
+            <a href="https://github.com/InsaSaleem/PySpark-vs-Python-Performace-Analysis" target="_blank" class="btn-outline btn-sm">GitHub</a>
+            <a href="assets/pdfs/Report-Pakistan Energy Access Household Panel Survey using PySpark.pdf" target="_blank" class="btn-outline btn-sm">REPORT ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">📚</div>
+        <div class="timeline-content">
+          <div class="project-company">📚 Smart University Solution</div>
+          <h3 class="project-title">SmartLib — Centralized University Library Suite</h3>
+          <p class="project-date">Web &amp; Mobile Platform Architectures</p>
+          <p class="project-description">A cross-platform ecosystem leveraging QR code validation, automated distribution calculations, and real-time inventory synchronization for faculty, students, and campus librarians.</p>
+          <div class="project-tech-row">
+            <span class="tech-tag">React Native</span><span class="tech-tag">Supabase</span><span class="tech-tag">PHP</span>
+            <span class="tech-tag">MySQL</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">QR Engine</span>
+          </div>
+         <div class="project-actions">
+  <a href="https://github.com/InsaSaleem/SMARTLIB-Code" target="_blank" class="btn-outline btn-sm">💻 GitHub (Web)</a>
+  <a href="https://github.com/InsaSaleem/SmartLib-Mobile" target="_blank" class="btn-outline btn-sm">📱 GitHub (Mobile)</a>
+  <a href="assets/pdfs/web project report.pdf" target="_blank" class="btn-outline btn-sm">Web Report ↗</a>
+  <a href="assets/pdfs/MDA-Report.pdf" target="_blank" class="btn-outline btn-sm">Mobile Report ↗</a>
+</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">🛍️</div>
+        <div class="timeline-content">
+          <div class="project-company">🛒 Database Application</div>
+          <h3 class="project-title">Grocery Management System</h3>
+          <p class="project-date">Web Platform · Inventory &amp; Logistics</p>
+          <p class="project-description">Streamlines commercial store operations with dedicated billing, inventory control metrics, payment logging, and strict relational database constraints using optimized CRUD logic.</p>
+          <div class="project-tech-row">
+            <span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">HTML5 / CSS3</span>
+            <span class="tech-tag">XAMPP Server</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/InsaSaleem/grocery-billing-system" target="_blank" class="btn-outline btn-sm">GitHub</a>
+            <a href="assets/pdfs/ADBMS Report.pdf" target="_blank" class="btn-outline btn-sm">REPORT ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">🎙️</div>
+        <div class="timeline-content">
+          <div class="project-company">🤖 Intelligence System</div>
+          <h3 class="project-title">AI-Powered Voice Assistant for Campus Navigation</h3>
+          <p class="project-date">📅 Jan 2025 · Core Engineering</p>
+          <p class="project-description">Voice-driven UI mapping indoor/outdoor campus facilities. Integrates real-time custom speech-to-text (STT) parsing models alongside graph algorithms for optimal path routing.</p>
+          <div class="project-tech-row">
+            <span class="tech-tag">Python</span><span class="tech-tag">Speech Recognition</span><span class="tech-tag">Graph Theory</span>
+            <span class="tech-tag">Dijkstra's Algorithm</span><span class="tech-tag">TTS</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/InsaSaleem/AI-Based-University-Navigation-System-in-Python" target="_blank" class="btn-outline btn-sm">GitHub</a>
+            <a href="assets/pdfs/AI Project Report.pdf" target="_blank" class="btn-outline btn-sm">REPORT ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">🤖</div>
+        <div class="timeline-content">
+          <div class="project-company">🧠 Heuristics &amp; Algorithms</div>
+          <h3 class="project-title">Robot Navigation Puzzle (Knight's Travails)</h3>
+          <p class="project-date">📅 Dec 2024 · Search Simulation</p>
+          <p class="project-description">Interactive UI engine built to simulate search strategy dynamics. Renders step-by-step comparative animations between BFS and DFS pathfinding execution loops on mathematical grids.</p>
+          <div class="project-tech-row">
+            <span class="tech-tag">Python</span><span class="tech-tag">Artificial Intelligence</span><span class="tech-tag">BFS / DFS</span>
+            <span class="tech-tag">Tkinter UI</span><span class="tech-tag">Path Optimization</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/InsaSaleem/Knights_Travails" target="_blank" class="btn-outline btn-sm">GitHub</a>
+            <a href="assets/pdfs/ROBOT Navigation Puzzel.pdf" target="_blank" class="btn-outline btn-sm">REPORT ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">🛒</div>
+        <div class="timeline-content">
+          <div class="project-company">🛒 DevelopersHub Corporation</div>
+          <h3 class="project-title">Brand — E-Commerce Website Portfolio</h3>
+          <p class="project-date">📅 2025 · Frontend Design Internship</p>
+          <p class="project-description">Pixel-perfect Figma-to-code clone of an Alibaba-style B2B marketplace. Fully responsive layouts equipped with localized shopping carts and state persistence engines.</p>
+          <div class="project-tech-row">
+            <span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span>
+            <span class="tech-tag">Vanilla JavaScript</span><span class="tech-tag">localStorage</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://insasaleem.github.io/ecommerce-frontend-design/" target="_blank" class="btn-primary btn-sm">🌐 Live Demo</a>
+            <a href="https://github.com/InsaSaleem/ecommerce-frontend-design" target="_blank" class="btn-outline btn-sm">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<section class="section" id="skills">
+    <div class="section-label reveal">Competencies</div>
+     
+    <h2 class="section-title reveal">Technical Skills<span class="title-dot">.</span></h2>
+    <p class="section-sub reveal">A collection of frameworks, languages, and technical disciplines I actively utilize.</p>
+      
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <h3>Languages</h3>
+        <div class="skill-items">
+          <div class="skill-card">C++</div>
+          <div class="skill-card">Python</div>
+          <div class="skill-card">JavaScript</div>
+          <div class="skill-card">HTML5</div>
+          <div class="skill-card">CSS3</div>
+          <div class="skill-card">SQL</div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h3>Frameworks &amp; Tools</h3>
+        <div class="skill-items">
+          <div class="skill-card">React.js</div>
+          <div class="skill-card">Tailwind CSS</div>
+          <div class="skill-card">phpMyAdmin</div>
+          <div class="skill-card">Tkinter</div>
+          <div class="skill-card">NumPy</div>
+          <div class="skill-card">VS Code</div>
+          <div class="skill-card">Canva</div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <h3>Specialties</h3>
+        <div class="skill-items">
+          <div class="skill-card">DSA</div>
+          <div class="skill-card">BFS / DFS</div>
+          <div class="skill-card">Backtracking</div>
+          <div class="skill-card">Hashing</div>
+          <div class="skill-card">Cisco Packet Tracer</div>
+          <div class="skill-card">VMware</div>
+          <div class="skill-card">UltraISO</div>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- ===== CERTIFICATIONS ===== -->
+  <section class="cert-section section" id="certifications">
+      <div class="cert-section-top">
+        <div>
+          <div class="section-label reveal">Learning</div>
+          <h2 class="section-title reveal">Certifications<br>&amp; Programs<span class="title-dot">.</span></h2>
+        </div>
+        <p class="section-sub cert-sub reveal">Continuous learning through global programs and online certifications.</p>
+      </div>
+      <div class="cert-grid">
+
+        <a href="https://www.coursera.org/account/accomplishments/specialization/C9NUNO8Y5NM5" target="_blank" class="cert-card reveal">
+          <div class="cert-logo google-logo">G</div>
+          <div class="cert-info">
+            <h4>Google Data Analytics Professional Certificate</h4>
+            <p class="cert-issuer">GOOGLE · COURSERA</p>
+            <p class="cert-desc">Built strong skills in SQL, R, and data visualization through real-world datasets and analysis tasks.</p>
+          </div>
+          <span class="cert-link-icon">↗</span>
+        </a>
+
+        <a href="https://www.coursera.org/account/accomplishments/specialization/3YPY05QWXQIU" target="_blank" class="cert-card reveal">
+          <div class="cert-logo google-logo">G</div>
+          <div class="cert-info">
+            <h4>Google IT Automation with Python</h4>
+            <p class="cert-issuer">GOOGLE · COURSERA</p>
+            <p class="cert-desc">Python programming, IT automation, version control with Git, and real-world troubleshooting techniques.</p>
+          </div>
+          <span class="cert-link-icon">↗</span>
+        </a>
+
+        <a href="https://www.coursera.org/account/accomplishments/specialization/JG6HTZTRFG5S" target="_blank" class="cert-card reveal">
+          <div class="cert-logo google-logo">G</div>
+          <div class="cert-info">
+            <h4>Google Business Intelligence Professional Certificate</h4>
+            <p class="cert-issuer">GOOGLE · COURSERA</p>
+            <p class="cert-desc">BI concepts, data analysis, dashboards, reporting, and data-driven decision making.</p>
+          </div>
+          <span class="cert-link-icon">↗</span>
+        </a>
+
+        <a href="https://www.coursera.org/account/accomplishments/specialization/NQPBS6W4MTFT" target="_blank" class="cert-card reveal">
+          <div class="cert-logo google-logo">G</div>
+          <div class="cert-info">
+            <h4>Google Project Management Professional Certificate</h4>
+            <p class="cert-issuer">GOOGLE · COURSERA</p>
+            <p class="cert-desc">Agile methodology, project planning, execution, and team management skills.</p>
+          </div>
+          <span class="cert-link-icon">↗</span>
+        </a>
+
+        <a href="https://www.coursera.org/account/accomplishments/verify/F86RZF0QMSZ2" target="_blank" class="cert-card reveal">
+          <div class="cert-logo google-logo">G</div>
+          <div class="cert-info">
+            <h4>Google AI Essentials</h4>
+            <p class="cert-issuer">GOOGLE · COURSERA · NOV 2025 · ID: F86RZF0QMSZ2</p>
+            <p class="cert-desc">Mastered AI tools, operational frameworks, platforms, and foundational AI-driven problem-solving methodologies.</p>
+          </div>
+          <span class="cert-link-icon">↗</span>
+        </a>
+
+        <a href="https://www.coursera.org/account/accomplishments/verify/F00WMW4Y1ADM" target="_blank" class="cert-card reveal">
+          <div class="cert-logo google-logo">G</div>
+          <div class="cert-info">
+            <h4>Google Prompting Essentials</h4>
+            <p class="cert-issuer">GOOGLE · COURSERA · NOV 2025 · ID: F00WMW4Y1ADM</p>
+            <p class="cert-desc">Developed effective AI prompting strategies, content output generation, and AI-assisted workflow productivity.</p>
+          </div>
+          <span class="cert-link-icon">↗</span>
+        </a>
+
+        <div class="cert-card reveal">
+          <div class="cert-logo accenture-logo">&#9650;</div>
+          <div class="cert-info">
+            <h4>Digital Skills: Artificial Intelligence</h4>
+            <p class="cert-issuer">ACCENTURE · FUTURELEARN</p>
+            <p class="cert-desc">Explored AI ecosystem potential, industry shifts, and structural relationships managing human-AI collaboration.</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-logo aspire-logo">A</div>
+          <div class="cert-info">
+            <h4>Aspire Leaders Program — Cohort V</h4>
+            <p class="cert-issuer">ASPIRE INSTITUTE · HARVARD UNIVERSITY INITIATIVE</p>
+            <p class="cert-desc">Elite leadership development program affiliated with Harvard University.</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-logo ai-logo">AI</div>
+          <div class="cert-info">
+            <h4>AI-Integrated Leadership Program (AILP)</h4>
+            <p class="cert-issuer">ASPIRE INSTITUTE</p>
+            <p class="cert-desc">Strengthened leadership, communication, and AI-informed decision-making skills for technology-driven environments.</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-logo dev-logo">DH</div>
+          <div class="cert-info">
+            <h4>Front-End Development Internship Certificate</h4>
+            <p class="cert-issuer">DEVELOPERSHUB CORPORATION · APR 2026 · ID: DHC-3224</p>
+            <p class="cert-desc">6-week internship with exceptional performance — responsive web apps, professional workflows, real-world project collaboration.</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-logo imun-logo">MUN</div>
+          <div class="cert-info">
+            <h4>Campus Ambassador Internship — IMUN</h4>
+            <p class="cert-issuer">INTERNATIONAL MODEL UNITED NATIONS · APR 2026 · ID: I313-MUN1-0056</p>
+            <p class="cert-desc">Promoted international conferences, engaged diverse student communities, enhanced communication and leadership skills.</p>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-logo robotics-logo">&#9881;</div>
+          <div class="cert-info">
+            <h4>7th Annual PGC Science &amp; Robotics Exhibition</h4>
+            <p class="cert-issuer">PUNJAB COLLEGES · CERTIFICATE OF MERIT</p>
+            <p class="cert-desc">Distinguished participant engineering control applications and hardware modeling concepts within robotics design.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+   <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="section-label reveal">Connection</div>
+      <h2 class="section-title reveal">Get in Touch<span class="title-dot">.</span></h2>
+      
+      <div class="contact-inner">
+        <div class="contact-left reveal  ">
+          <p class="contact-text">
+            Whether you want to discuss standard data analytics frameworks, modern frontend engineering configurations, or potential open-source internship collaborations, feel free to drop a message!
+          </p>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <span class="contact-detail-icon">✉️</span>
+              <span>insasaleem6@gmail.com</span>
+            </div>
+            <div class="contact-detail-item">
+            </div>
+            <div class="contact-detail-item">
+              <span class="contact-detail-icon">📍</span>
+              <span>Rawalpindi, Pakistan</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right reveal">
+          <div class="contact-form-card">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your Name" id="cName"/>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" id="cEmail"/>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="Tell me about your project or opportunity..." id="cMsg" rows="4"></textarea>
+            </div>
+            
+            <button class="send-btn" id="sendBtn" onclick="sendMsg()">Send Message</button>
+
+            <div id="formStatus" style="margin-top: 14px; font-size: 14px; text-align: center; display: none; font-weight: 500;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p><b>Built by Insa Saleem © 2026 </b></p>
+      <div class="footer-links">
+        <a href="https://github.com/InsaSaleem" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/insa-saleem/" target="_blank">LinkedIn</a>
+        <a href="mailto:insasaleem6@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
