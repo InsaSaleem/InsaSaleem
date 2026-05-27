@@ -6,7 +6,7 @@
 
 <h3 align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=800&color=7AA5FF&center=true&vCenter=true&width=500&lines=Frontend+Web+Developer;Data+Analyst;Computer+Science+Student" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=500&color=7AA5FF&center=true&vCenter=true&width=500&lines=Frontend+Web+Developer;Data+Analyst;Computer+Science+Student" alt="Typing SVG" />
   </a>
 </h3>
 
@@ -71,3 +71,11 @@
     </td>
   </tr>
 </table>
+
+---
+
+### 🌀 Animated Dev Tech-Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,python,mysql,figma,cpp,github,vscode&theme=dark" alt="Animated Skills Marquee" />
+</p>
