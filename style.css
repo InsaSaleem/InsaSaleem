@@ -3,12 +3,13 @@
 ============================================ */
 *, *::before, *::after { margin:0; padding:0; 
   border-radius: 10px;box-sizing:border-box; }
+ 
 
 /* Updated HTML to handle the screen frame padding and theme frame colors */
 html { 
   scroll-behavior:smooth; 
   font-size:16px; 
-  padding: 15px; 
+  padding: 9.5px; 
   min-height: 100vh;
   transition: background .4s ease;
 }
@@ -36,7 +37,7 @@ html {
 }
 [data-theme="light"] {
   /* Frame Background (Light Blue) */
-  --frame-bg: #0b8ee6; 
+  --frame-bg: black; 
   
   --bg:#f4f5f7; --bg2:#ebedf2; --bg3:#e1e4ed; --bg4:#d2d7e5;
   --fg:#0f172a; --fg2:#334155; --fg3:#64748b; --fg4:#94a3b8;
