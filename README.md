@@ -74,8 +74,13 @@
 
 ---
 
-### 🌀 Animated Dev Tech-Stack
+### 🕹️ Retro Arcade Level
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,python,mysql,figma,cpp,github,vscode&theme=dark" alt="Animated Skills Marquee" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=120&section=header&text=Pacman%20is%20Chomping%20My%20Skills!&fontSize=22&theme=tokyonight" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" width="0" /> <!-- Hidden spacer asset hook -->
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt="Pacman Animation Layout" width="100%" />
 </p>
