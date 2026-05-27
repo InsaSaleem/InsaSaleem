@@ -3,40 +3,62 @@
 </p>
 
 <h1 align="center">Hi 👋, I'm Insa Saleem</h1>
-<h3 align="center">A passionate frontend developer & Data Analyst</h3>
+
+<h3 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=7AA5FF&center=true&vCenter=true&width=500&lines=Frontend+Web+Developer;Data+Analyst;Computer+Science+Student" alt="Typing SVG" />
+  </a>
+</h3>
 
 <p align="center"> 
-  <img src="https://komarev.com/ghpvc/?username=insasaleem&label=Profile%20views&color=0e75b6&style=flat" alt="insasaleem" /> 
+  <img src="https://komarev.com/ghpvc/?username=insasaleem&label=Profile%20views&color=0e75b6&style=flat" alt="insasaleem profile views" /> 
 </p>
 
+---
+
+### 🚀 About Me
+
 - 🌱 I’m currently learning **React**
-
-- 👨‍💻 All of my projects are available at https://insasaleem.github.io/InsaSaleem/
-
+- 👨‍💻 All of my projects are available at [https://insasaleem.github.io/InsaSaleem/](https://insasaleem.github.io/InsaSaleem/)
 - 💬 Ask me about **HTML, CSS, JavaScript**
-
-- 📫 How to reach me **insasaleem6@gmail.com**
+- 📫 How to reach me: **insasaleem6@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://www.linkedin.com/in/insa-saleem/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="insa saleem" height="30" width="40" /></a>
+  <a href="https://www.linkedin.com/in/insa-saleem/" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="insa saleem linkedin" height="30" width="40" />
+  </a>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> 
-  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
-  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> 
-  <a href="https://www.python.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
-  <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a>
-  <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> 
-  <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> 
-  <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> 
-  <a href="https://www.oracle.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/oracle/oracle-original.svg" alt="oracle" width="40" height="40"/> </a> 
-</p>
+---
 
-<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=insasaleem&show_icons=true&theme=tokyonight" alt="Insa's Stats" />
+### 🛠️ Languages and Tools
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=insasaleem&theme=tokyonight" alt="Insa's Streak" />
+#### 🌐 Frontend Development
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" /> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
 
-<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=insasaleem&layout=compact&theme=tokyonight" alt="Top Langs" />
+#### 📊 Data Analytics & Databases
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" /> <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle" />
+
+#### 🎨 Design & Core Programming
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" /> <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" alt="C" /> <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
+
+---
+
+### 📊 GitHub Statistics
+
+<table align="center" width="100%">
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=insasaleem&show_icons=true&theme=tokyonight" width="100%" alt="Insa's Stats" />
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=insasaleem&layout=compact&theme=tokyonight" width="100%" alt="Top Langs" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2" width="100%">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=insasaleem&theme=tokyonight" width="100%" alt="Insa's Streak" />
+    </td>
+  </tr>
+</table>
