@@ -14,8 +14,6 @@
   <img src="https://komarev.com/ghpvc/?username=insasaleem&label=Profile%20views&color=0e75b6&style=flat" alt="insasaleem profile views" /> 
 </p>
 
----
-
 ### 🚀 About Me
 
 - 🌱 I’m currently learning **React**
