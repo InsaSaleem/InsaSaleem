@@ -74,13 +74,7 @@
 
 ---
 
-### 🕹️ Retro Arcade Level
-
+### 📈 Activity Matrix
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=120&section=header&text=Pacman%20is%20Chomping%20My%20Skills!&fontSize=22&theme=tokyonight" width="100%" />
-</p>
-
-<p align="center">
-  <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" width="0" /> <!-- Hidden spacer asset hook -->
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt="Pacman Animation Layout" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=insasaleem&theme=tokyonight&bg_color=00000000&hide_border=true&area=true" width="100%" alt="Insa's Activity Graph" />
 </p>
