@@ -6,7 +6,7 @@
 
 <h3 align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=7AA5FF&center=true&vCenter=true&width=500&lines=Frontend+Web+Developer;Data+Analyst;Computer+Science+Student" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=800&color=7AA5FF&center=true&vCenter=true&width=500&lines=Frontend+Web+Developer;Data+Analyst;Computer+Science+Student" alt="Typing SVG" />
   </a>
 </h3>
 
@@ -27,6 +27,15 @@
 <p align="left">
   <a href="https://www.linkedin.com/in/insa-saleem/" target="blank">
     <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="insa saleem linkedin" height="30" width="40" />
+  </a>
+</p>
+
+---
+
+### 🏆 GitHub Trophies
+<p align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=insasaleem&theme=tokyonight&column=4&margin-w=15&margin-h=15" alt="Insa's Trophies" width="100%" />
   </a>
 </p>
 
@@ -62,8 +71,3 @@
     </td>
   </tr>
 </table>
-
-### 🏙️ 3D Profile Isometric View
-<p align="center">
-  <img src="https://github-profile-3d-contrib.suco.cc/api?username=insasaleem&theme=dark" alt="Insa's 3D Profile City" width="100%" />
-</p>
