@@ -1,4 +1,4 @@
- <p align="center">
+<p align="center">
   <img src="images/Banner.jpg" alt="Insa Saleem Banner" width="100%" />
 </p>
 
@@ -10,66 +10,45 @@
   </a>
 </h3>
 
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=insasaleem&label=Profile%20views&color=0e75b6&style=flat" alt="insasaleem profile views" />
+<p align="left"> 
+  <img src="https://komarev.com/ghpvc/?username=insasaleem&label=Profile%20views&color=0e75b6&style=flat" alt="insasaleem profile views" /> 
 </p>
 
 ### 🚀 About Me
 
 - 🌱 I’m currently learning **React**
-- 👨‍💻 All of my projects are available at [My Portfolio](https://insasaleem.github.io/InsaSaleem/)
+- 👨‍💻 All of my projects are available at [https://insasaleem.github.io/InsaSaleem/](https://insasaleem.github.io/InsaSaleem/)
 - 💬 Ask me about **HTML, CSS, JavaScript**
 - 📫 How to reach me: **insasaleem6@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
-
 <p align="left">
-  <a href="https://www.linkedin.com/in/insa-saleem/" target="_blank">
-    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="Insa Saleem LinkedIn" height="30" width="40" />
+  <a href="https://www.linkedin.com/in/insa-saleem/" target="blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="insa saleem linkedin" height="30" width="40" />
   </a>
 </p>
 
 ---
 
----
 ### 🏆 GitHub Trophies
-
 <p align="center">
-  <a href="https://github.com/insasaleem">
-    🏆 Explore my GitHub profile and repositories
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=insasaleem&theme=tokyonight&column=4&margin-w=15&margin-h=15" alt="Insa's Trophies" width="100%" />
   </a>
 </p>
 
----
 ---
 
 ### 🛠️ Languages and Tools
 
 #### 🌐 Frontend Development
-
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-</p>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" /> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
 
 #### 📊 Data Analytics & Databases
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter Notebook" />
-  <img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle" />
-</p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter Notebook" /> <img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" /> <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle" />
 
 #### 🎨 Design & Core Programming
-
-<p>
-  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
-  <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" alt="C" />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
-</p>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" /> <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" alt="C" /> <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
 
 ---
 
@@ -78,41 +57,22 @@
 <table align="center" width="100%">
   <tr>
     <td align="center" width="50%">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=insasaleem&show_icons=true&theme=tokyonight" width="100%" alt="Insa's GitHub Stats" />
+      <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=insasaleem&show_icons=true&theme=tokyonight" width="100%" alt="Insa's Stats" />
     </td>
     <td align="center" width="50%">
-      <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=insasaleem&layout=compact&theme=tokyonight" width="100%" alt="Most Used Languages" />
+      <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=insasaleem&layout=compact&theme=tokyonight" width="100%" alt="Top Langs" />
     </td>
   </tr>
   <tr>
-    <td align="center" colspan="2">
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=insasaleem&theme=tokyonight" width="100%" alt="Insa's GitHub Contribution Streak" />
+    <td align="center" colspan="2" width="100%">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=insasaleem&theme=tokyonight" width="100%" alt="Insa's Streak" />
     </td>
   </tr>
 </table>
 
 ---
 
----
-### 📈 GitHub Activity Graph
-
+### 📈 Activity Matrix
 <p align="center">
-  <a href="https://github.com/insasaleem">
-    <img
-      src="https://YOUR-VERCEL-DOMAIN/graph?username=insasaleem&theme=tokyo-night"
-      alt="Insa Saleem's GitHub Activity Graph"
-      width="100%"
-    />
-  </a>
-</p>
-
----
-### 💫 Thanks for Visiting!
-
-<p align="center">
-  Thanks for stopping by my profile! Feel free to explore my repositories and connect with me.
-</p>
-
-<p align="center">
-  <i>Keep learning, keep building, and keep growing. 🚀</i>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=insasaleem&theme=tokyonight&bg_color=00000000&hide_border=true&area=true" width="100%" alt="Insa's Activity Graph" />
 </p>
