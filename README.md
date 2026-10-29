@@ -31,14 +31,16 @@
 
 ---
 
+---
 ### 🏆 GitHub Trophies
 
 <p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=insasaleem&theme=tokyonight&column=4&margin-w=15&margin-h=15" alt="Insa's GitHub Trophies" width="100%" />
+  <a href="https://github.com/insasaleem">
+    🏆 Explore my GitHub profile and repositories
   </a>
 </p>
 
+---
 ---
 
 ### 🛠️ Languages and Tools
@@ -91,26 +93,20 @@
 
 ---
 
+---
 ### 📈 GitHub Activity Graph
 
 <p align="center">
   <a href="https://github.com/insasaleem">
     <img
-      src="https://github-readme-activity-graph.vercel.app/graph?username=insasaleem&bg_color=1a1b27&color=7aa5ff&line=7aa5ff&point=ffffff&area=true&hide_border=true"
+      src="https://YOUR-VERCEL-DOMAIN/graph?username=insasaleem&theme=tokyo-night"
       alt="Insa Saleem's GitHub Activity Graph"
       width="100%"
     />
   </a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/insasaleem">
-    View my GitHub profile and contributions
-  </a>
-</p>
-
 ---
-
 ### 💫 Thanks for Visiting!
 
 <p align="center">
